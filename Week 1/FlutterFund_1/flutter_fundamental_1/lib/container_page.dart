@@ -14,10 +14,37 @@ class _ContainerPageState extends State<ContainerPage> {
       appBar: AppBar(
         title: const Text("hello World"),
       ),
-      body: Container(
-        height: 100,
-        width: 100,
-        color: Colors.amberAccent,
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.amberAccent,
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Color.fromARGB(255, 28, 89, 174),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                color: Color.fromARGB(255, 177, 1, 24),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Color.fromARGB(255, 104, 205, 2),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
