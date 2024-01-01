@@ -23,14 +23,15 @@ class _BoxDecorationPageState extends State<BoxDecorationPage> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      bottomRight: Radius.circular(10)),
-                  gradient: const LinearGradient(
-                      colors: [Colors.lightGreenAccent, Colors.greenAccent],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomLeft),
-                  border: Border.all(color: Colors.brown, width: 2)),
+                borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(10)),
+                border: Border.all(color: Colors.brown, width: 2),
+                image: const DecorationImage(
+                    image: NetworkImage(
+                        'https://www.wikihow.com/images/thumb/5/5b/LR22-RTW-Haven-Smiles.png/-crop-127-140-127px-LR22-RTW-Haven-Smiles.png.webp'),
+                    fit: BoxFit.cover),
+              ),
             ),
           ],
         ),
