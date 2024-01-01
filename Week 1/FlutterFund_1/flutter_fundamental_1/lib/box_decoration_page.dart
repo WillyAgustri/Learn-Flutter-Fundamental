@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class BoxDecoration extends StatefulWidget {
-  const BoxDecoration({super.key});
+class BoxDecorationPage extends StatefulWidget {
+  const BoxDecorationPage({super.key});
 
   @override
-  State<BoxDecoration> createState() => _BoxDecorationState();
+  State<BoxDecorationPage> createState() => _BoxDecorationPageState();
 }
 
-class _BoxDecorationState extends State<BoxDecoration> {
+class _BoxDecorationPageState extends State<BoxDecorationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
