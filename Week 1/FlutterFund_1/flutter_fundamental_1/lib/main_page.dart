@@ -12,36 +12,34 @@ class MainPage extends StatelessWidget {
         title: const Text('Hello world'),
       ),
       body: Center(
-        child: Container(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 5),
-                child: ElevatedButton(
-                  child: Text('Ke Container_Page'),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ContainerPage()),
-                    );
-                  },
-                ),
-              ),
-              ElevatedButton(
-                child: Text('Ke Box Decoration'),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5),
+              child: ElevatedButton(
+                child: Text('Ke Container_Page'),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const BoxDecorationPage()),
+                    MaterialPageRoute(builder: (context) => ContainerPage()),
                   );
                 },
               ),
-            ],
-          ),
+            ),
+            ElevatedButton(
+              child: Text('Ke Box Decoration'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const BoxDecorationPage()),
+                );
+              },
+            ),
+          ],
         ),
       ),
       backgroundColor: Colors.grey,
