@@ -23,6 +23,9 @@ class _BoxDecorationPageState extends State<BoxDecorationPage> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(color: Colors.black54, offset: Offset(5, 5))
+                ],
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(10),
                     bottomRight: Radius.circular(10)),
