@@ -15,11 +15,10 @@ class MainPage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              color: Colors.amber,
               margin: EdgeInsets.symmetric(vertical: 5),
               child: ElevatedButton(
                 child: Text('Ke Container_Page'),
@@ -31,25 +30,31 @@ class MainPage extends StatelessWidget {
                 },
               ),
             ),
-            ElevatedButton(
-              child: Text('Ke Box Decoration'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const BoxDecorationPage()),
-                );
-              },
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5),
+              child: ElevatedButton(
+                child: Text('Ke Box Decoration'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const BoxDecorationPage()),
+                  );
+                },
+              ),
             ),
-            ElevatedButton(
-              child: Text('Ke Text Page'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const TextWidgetPage()),
-                );
-              },
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5),
+              child: ElevatedButton(
+                child: Text('Ke Text Page'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TextWidgetPage()),
+                  );
+                },
+              ),
             ),
           ],
         ),
