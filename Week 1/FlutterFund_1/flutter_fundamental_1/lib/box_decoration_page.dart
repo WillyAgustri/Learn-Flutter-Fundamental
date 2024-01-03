@@ -12,7 +12,7 @@ class _BoxDecorationPageState extends State<BoxDecorationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Box Decoration"),
+        title: const Text("Box Decoration"),
       ),
       body: Center(
         child: Column(
@@ -23,7 +23,7 @@ class _BoxDecorationPageState extends State<BoxDecorationPage> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(color: Colors.black54, offset: Offset(5, 5))
                 ],
                 borderRadius: const BorderRadius.only(
