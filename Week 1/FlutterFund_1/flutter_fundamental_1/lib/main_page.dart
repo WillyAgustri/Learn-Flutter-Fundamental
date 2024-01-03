@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fundamental_1/box_decoration_page.dart';
 import 'package:flutter_fundamental_1/container_page.dart';
+import 'package:flutter_fundamental_1/text_widget_page.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -18,6 +19,7 @@ class MainPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
+              color: Colors.amber,
               margin: EdgeInsets.symmetric(vertical: 5),
               child: ElevatedButton(
                 child: Text('Ke Container_Page'),
@@ -36,6 +38,16 @@ class MainPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const BoxDecorationPage()),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: Text('Ke Text Page'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const TextWidgetPage()),
                 );
               },
             ),
