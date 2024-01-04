@@ -12,7 +12,7 @@ class _FontTypePageState extends State<FontTypePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Font Type")),
-      body: Center(
+      body: const Center(
         child: SizedBox(
           child: Text("Ini Adalah Font Type"),
         ),

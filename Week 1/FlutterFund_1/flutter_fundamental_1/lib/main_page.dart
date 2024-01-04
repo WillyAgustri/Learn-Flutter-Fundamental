@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fundamental_1/box_decoration_page.dart';
 import 'package:flutter_fundamental_1/container_page.dart';
+import 'package:flutter_fundamental_1/font_type_page.dart';
 import 'package:flutter_fundamental_1/text_widget_page.dart';
 
 class MainPage extends StatelessWidget {
@@ -46,12 +47,25 @@ class MainPage extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(vertical: 5),
               child: ElevatedButton(
-                child: Text('Ke Text Page'),
+                child: Text('Ke Text Decoration Page'),
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const TextWidgetPage()),
+                  );
+                },
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5),
+              child: ElevatedButton(
+                child: Text('Ke Text Style Page'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FontTypePage()),
                   );
                 },
               ),
