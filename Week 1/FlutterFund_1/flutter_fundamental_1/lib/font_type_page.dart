@@ -14,7 +14,11 @@ class _FontTypePageState extends State<FontTypePage> {
       appBar: AppBar(title: Text("Font Type")),
       body: const Center(
         child: SizedBox(
-          child: Text("Ini Adalah Font Type"),
+          child: Text(
+            "Ini Adalah Font Type",
+            style: TextStyle(
+                fontFamily: "Montserrat", fontWeight: FontWeight.bold),
+          ),
         ),
       ),
     );

@@ -22,7 +22,10 @@ class MainPage extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(vertical: 5),
               child: ElevatedButton(
-                child: Text('Ke Container_Page'),
+                child: Text(
+                  'Ke Container_Page',
+                  style: TextStyle(fontFamily: "Montserrat"),
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -34,7 +37,10 @@ class MainPage extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(vertical: 5),
               child: ElevatedButton(
-                child: Text('Ke Box Decoration'),
+                child: Text(
+                  'Ke Box Decoration',
+                  style: TextStyle(fontFamily: "Montserrat"),
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -47,7 +53,10 @@ class MainPage extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(vertical: 5),
               child: ElevatedButton(
-                child: Text('Ke Text Decoration Page'),
+                child: Text(
+                  'Ke Text Decoration Page',
+                  style: TextStyle(fontFamily: "Montserrat"),
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -60,7 +69,10 @@ class MainPage extends StatelessWidget {
             Container(
               margin: EdgeInsets.symmetric(vertical: 5),
               child: ElevatedButton(
-                child: Text('Ke Text Style Page'),
+                child: const Text(
+                  'Ke Text Style Page',
+                  style: TextStyle(fontFamily: "Montserrat"),
+                ),
                 onPressed: () {
                   Navigator.push(
                     context,

@@ -44,12 +44,12 @@ class _ContainerPageState extends State<ContainerPage> {
                 Container(
                   height: 100,
                   width: 100,
-                  color: Color.fromARGB(255, 177, 1, 24),
+                  color: const Color.fromARGB(255, 177, 1, 24),
                 ),
                 Container(
                   height: 100,
                   width: 100,
-                  color: Color.fromARGB(255, 104, 205, 2),
+                  color: const Color.fromARGB(255, 104, 205, 2),
                 ),
               ],
             ),
