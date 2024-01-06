@@ -20,21 +20,9 @@ class MainPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 5),
-              child: ElevatedButton(
-                child: const Text(
-                  'Ke Container_Page',
-                  style: TextStyle(fontFamily: "Montserrat"),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ContainerPage()),
-                  );
-                },
-              ),
+            const MenuWidget(
+              text: "Ke Container Page",
+              onPressedCallback: ContainerPage(),
             ),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 5),
@@ -106,5 +94,34 @@ class MainPage extends StatelessWidget {
     );
 
     return scaffold;
+  }
+}
+
+class MenuWidget extends StatelessWidget {
+  const MenuWidget({
+    required this.text,
+    required this.onPressedCallback,
+    super.key,
+  });
+  final String text;
+  final Widget onPressedCallback;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 5),
+      child: ElevatedButton(
+        child: Text(
+          text,
+          style: TextStyle(fontFamily: "Montserrat"),
+        ),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => onPressedCallback),
+          );
+        },
+      ),
+    );
   }
 }
