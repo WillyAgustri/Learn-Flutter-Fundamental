@@ -17,9 +17,21 @@ class _StatePageState extends State<StatePage> {
         title: Text("Stateful Widget"),
       ),
       body: Center(
-        child: Text(
-          "$number",
-          style: const TextStyle(fontSize: 25, fontFamily: "Montserrat"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "$number",
+              style: const TextStyle(fontSize: 25, fontFamily: "Montserrat"),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    number++;
+                  });
+                },
+                child: Text("Click Me"))
+          ],
         ),
       ),
     );
