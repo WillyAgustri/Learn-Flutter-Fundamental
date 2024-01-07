@@ -14,78 +14,31 @@ class MainPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Hello world'),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const MenuWidget(
+            MenuWidget(
               text: "Ke Container Page",
               onPressedCallback: ContainerPage(),
             ),
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 5),
-              child: ElevatedButton(
-                child: const Text(
-                  'Ke Box Decoration',
-                  style: TextStyle(fontFamily: "Montserrat"),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const BoxDecorationPage()),
-                  );
-                },
-              ),
+            MenuWidget(
+              text: "Ke Box Decoration Page",
+              onPressedCallback: BoxDecorationPage(),
             ),
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 5),
-              child: ElevatedButton(
-                child: const Text(
-                  'Ke Text Decoration Page',
-                  style: TextStyle(fontFamily: "Montserrat"),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const TextWidgetPage()),
-                  );
-                },
-              ),
+            MenuWidget(
+              text: "Ke Text Decoration Page",
+              onPressedCallback: TextWidgetPage(),
             ),
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 5),
-              child: ElevatedButton(
-                child: const Text(
-                  'Ke Text Style Page',
-                  style: TextStyle(fontFamily: "Montserrat"),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const FontTypePage()),
-                  );
-                },
-              ),
+            MenuWidget(
+              text: "Ke Text Style Page",
+              onPressedCallback: FontTypePage(),
             ),
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 5),
-              child: ElevatedButton(
-                child: const Text(
-                  'Ke Stateful Widget Page',
-                  style: TextStyle(fontFamily: "Montserrat"),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const StatePage()),
-                  );
-                },
-              ),
+            MenuWidget(
+              text: "Ke Stateful Page (Increment)",
+              onPressedCallback: StatePage(),
             ),
           ],
         ),
@@ -113,7 +66,7 @@ class MenuWidget extends StatelessWidget {
       child: ElevatedButton(
         child: Text(
           text,
-          style: TextStyle(fontFamily: "Montserrat"),
+          style: const TextStyle(fontFamily: "Montserrat"),
         ),
         onPressed: () {
           Navigator.push(
