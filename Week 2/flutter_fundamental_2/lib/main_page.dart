@@ -22,11 +22,12 @@ class MainPage extends StatelessWidget {
                   style: TextStyle(),
                 ),
               ),
-              MenuWidget(
+              const MenuWidget(
                 judul: "Ke GridView",
                 onPressedCallback: GridViewPage(),
               ),
-              MenuWidget(judul: "Ke Stack Page", onPressedCallback: StackPage())
+              const MenuWidget(
+                  judul: "Ke Stack Page", onPressedCallback: StackPage())
             ],
           ),
         ));
@@ -46,7 +47,7 @@ class MenuWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsetsDirectional.symmetric(vertical: 10),
+        padding: const EdgeInsetsDirectional.symmetric(vertical: 10),
         child: ElevatedButton(
             onPressed: () {
               Navigator.push(context,
