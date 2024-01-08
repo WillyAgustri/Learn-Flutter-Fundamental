@@ -15,7 +15,7 @@ class GridViewPage extends StatelessWidget {
             width: 100,
             height: 100,
             color: Color.fromARGB(255, 225, 99, 179),
-            child: Text("Data 2"),
+            child: Text("Data 1"),
           ),
           Container(
             width: 100,
