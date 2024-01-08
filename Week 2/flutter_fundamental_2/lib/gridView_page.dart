@@ -9,7 +9,7 @@ class GridViewPage extends StatelessWidget {
       appBar: AppBar(title: Text("GridView Page")),
       body: GridView(
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 200),
         children: [
           Container(
             width: 100,
