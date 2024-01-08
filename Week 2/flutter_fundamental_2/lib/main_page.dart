@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fundamental_2/gridView_page.dart';
+import 'package:flutter_fundamental_2/stack_page.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -22,9 +23,10 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               MenuWidget(
-                judul: "GridView",
+                judul: "Ke GridView",
                 onPressedCallback: GridViewPage(),
-              )
+              ),
+              MenuWidget(judul: "Ke Stack Page", onPressedCallback: StackPage())
             ],
           ),
         ));
@@ -44,11 +46,12 @@ class MenuWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+        padding: EdgeInsetsDirectional.symmetric(vertical: 10),
         child: ElevatedButton(
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => onPressedCallback));
             },
-            child: const Text("Ke GridView")));
+            child: Text(judul)));
   }
 }
