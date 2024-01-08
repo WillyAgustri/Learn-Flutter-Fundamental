@@ -33,7 +33,7 @@ class GridViewPage extends StatelessWidget {
             width: 100,
             height: 100,
             color: Colors.blueAccent,
-            child: Text("Data 2"),
+            child: Text("Data 4"),
           )
         ],
       ),
