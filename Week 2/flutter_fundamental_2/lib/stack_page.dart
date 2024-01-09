@@ -18,6 +18,7 @@ class StackPage extends StatelessWidget {
               child: Text("Data 1"),
             ),
             Container(
+              alignment: Alignment.bottomCenter,
               width: 300,
               height: 300,
               color: Color.fromARGB(255, 75, 79, 118),
