@@ -15,7 +15,7 @@ class MappingPage extends StatelessWidget {
             colorBox(keterangan: "Kotak 1", warna: Colors.black12),
             colorBox(keterangan: "Kotak 2", warna: Colors.black12),
             colorBox(keterangan: "Kotak 3", warna: Colors.black12),
-            colorBox(keterangan: "Kotak 1", warna: Colors.black12),
+            colorBox(keterangan: "Kotak 4", warna: Colors.black12),
             colorBox(keterangan: "Kotak 1", warna: Colors.black12),
           ],
         ));
