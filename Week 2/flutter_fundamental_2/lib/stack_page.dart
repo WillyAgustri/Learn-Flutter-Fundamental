@@ -25,6 +25,7 @@ class StackPage extends StatelessWidget {
               child: Text("Data 2"),
             ),
             Container(
+              alignment: Alignment.bottomCenter,
               width: 200,
               height: 200,
               color: Colors.amber,
