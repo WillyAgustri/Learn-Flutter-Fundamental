@@ -9,6 +9,7 @@ class StackPage extends StatelessWidget {
       appBar: AppBar(title: Text("Stack Page")),
       body: Center(
         child: Stack(
+          alignment: Alignment.bottomCenter,
           children: [
             Container(
               alignment: Alignment.bottomCenter,
