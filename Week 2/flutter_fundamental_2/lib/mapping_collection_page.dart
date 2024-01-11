@@ -13,10 +13,17 @@ class MappingPage extends StatelessWidget {
         body: ListView(
           children: [
             colorBox(keterangan: "Kotak 1", warna: Colors.black12),
-            colorBox(keterangan: "Kotak 2", warna: Colors.black12),
-            colorBox(keterangan: "Kotak 3", warna: Colors.black12),
-            colorBox(keterangan: "Kotak 4", warna: Colors.black12),
-            colorBox(keterangan: "Kotak 5", warna: Colors.black12),
+            colorBox(
+                keterangan: "Kotak 2", warna: Color.fromARGB(31, 238, 9, 9)),
+            colorBox(
+                keterangan: "Kotak 3",
+                warna: const Color.fromARGB(31, 143, 41, 41)),
+            colorBox(
+                keterangan: "Kotak 4", warna: Color.fromARGB(31, 40, 65, 208)),
+            colorBox(
+                keterangan: "Kotak 5", warna: Color.fromARGB(31, 94, 139, 53)),
+            colorBox(
+                keterangan: "Kotak 6", warna: Color.fromARGB(31, 94, 139, 53)),
           ],
         ));
   }
