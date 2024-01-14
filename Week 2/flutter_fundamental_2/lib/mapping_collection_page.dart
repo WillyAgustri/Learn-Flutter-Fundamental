@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_fundamental_2/widgets/colorBox.dart';
 
@@ -7,7 +9,11 @@ class MappingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<colorBox> allItems = List.generate(
-        10, (index) => colorBox(keterangan: "Kotak =", warna: Colors.black12));
+        10,
+        (index) => colorBox(
+            keterangan: "Kotak =",
+            warna: Color.fromARGB(
+                255, Random().nextInt(255), Random().nextInt(255), 255)));
 
     return Scaffold(
         appBar: AppBar(
