@@ -15,7 +15,13 @@ class MappingPage extends StatelessWidget {
             warna: Color.fromARGB(
                 255, Random().nextInt(255), Random().nextInt(255), 255)));
 
-    final List<Map<String, dynamic>> data = List.generate(10, (index) => {});
+    final List<Map<String, dynamic>> data = List.generate(
+        10,
+        (index) => {
+              "text": "Kotak - ${index + 1}",
+              "Color": Color.fromARGB(
+                  255, Random().nextInt(255), 255, Random().nextInt(255))
+            });
 
     return Scaffold(
         appBar: AppBar(
