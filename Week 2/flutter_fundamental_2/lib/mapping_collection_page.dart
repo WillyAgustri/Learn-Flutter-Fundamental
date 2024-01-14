@@ -15,11 +15,13 @@ class MappingPage extends StatelessWidget {
             warna: Color.fromARGB(
                 255, Random().nextInt(255), Random().nextInt(255), 255)));
 
+    final List<Map<String, dynamic>> data = List.generate(10, (index) => {});
+
     return Scaffold(
         appBar: AppBar(
           title: Text("Learn Mapping"),
         ),
-        body: Column(
+        body: ListView(
           children: allItems,
         ));
   }
