@@ -26,6 +26,8 @@ class MappingPage extends StatelessWidget {
                 keterangan: "Kotak 6", warna: Color.fromARGB(31, 94, 139, 53)),
             colorBox(
                 keterangan: "Kotak 7", warna: Color.fromARGB(31, 94, 139, 53)),
+            colorBox(
+                keterangan: "Kotak 8", warna: Color.fromARGB(31, 94, 139, 53)),
           ],
         ));
   }
