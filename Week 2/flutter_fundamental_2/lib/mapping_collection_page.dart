@@ -18,8 +18,8 @@ class MappingPage extends StatelessWidget {
     final List<Map<String, dynamic>> data = List.generate(
         10,
         (index) => {
-              "text": "Kotak - ${index + 1}",
-              "Color": Color.fromARGB(
+              "ket": "Kotak - ${index + 1}",
+              "warna": Color.fromARGB(
                   255, Random().nextInt(255), 255, Random().nextInt(255))
             });
 
@@ -28,7 +28,9 @@ class MappingPage extends StatelessWidget {
           title: Text("Learn Mapping"),
         ),
         body: ListView(
-          children: allItems,
+          children: data
+              .map((e) => colorBox(keterangan: e["ket"], warna: e["warna"]))
+              .toList(),
         ));
   }
 }
