@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
+        backgroundColor: Colors.cyan,
         shadowColor: const Color.fromARGB(255, 0, 0, 0),
         title: Text("Latihan"),
         centerTitle: false,
