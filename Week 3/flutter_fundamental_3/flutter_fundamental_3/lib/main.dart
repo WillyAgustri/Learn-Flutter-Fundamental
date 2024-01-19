@@ -16,7 +16,16 @@ class MyApp extends StatelessWidget {
         title: Text("Latihan"),
         centerTitle: false,
         leading: FlutterLogo(),
-      )),
+        actions: [
+          IconButton(
+              onPressed: () {
+                print("Success");
+              },
+              icon: Icon(Icons.more_vert))
+        ],
+      )
+          // body: ,
+          ),
     );
   }
 }
