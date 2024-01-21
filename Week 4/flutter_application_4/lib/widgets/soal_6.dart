@@ -11,7 +11,7 @@ class soal_6 extends StatelessWidget {
         appBar: AppBar(
           leading: FlutterLogo(),
           backgroundColor: Colors.blue[100],
-          title: Text("Soal 5"),
+          title: Text("Soal 6"),
           actions: [
             IconButton(onPressed: () {}, icon: Icon(Icons.more_vert_outlined))
           ],
