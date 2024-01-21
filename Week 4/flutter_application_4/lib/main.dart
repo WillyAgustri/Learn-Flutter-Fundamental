@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './widgets/soal_1.dart';
+
 void main() {
   runApp(const MainApp());
 }
@@ -10,22 +12,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          leading: FlutterLogo(),
-          backgroundColor: Colors.blue[100],
-          title: Text("Soal 1"),
-          actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.more_vert_outlined))
-          ],
-        ),
-        body: Center(
-          child: Text(
-            'Ini Soal Nomor 1',
-            style: TextStyle(fontSize: 25),
-          ),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: soal_1(),
     );
   }
 }
