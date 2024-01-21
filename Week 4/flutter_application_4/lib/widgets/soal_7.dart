@@ -19,21 +19,19 @@ class soal_7 extends StatelessWidget {
         body: Row(
           children: [
             Container(
+              margin: EdgeInsets.only(right: 15),
               alignment: Alignment.center,
               width: 100,
               height: 100,
               color: Colors.blue[400],
               child: Text("Container 1"),
             ),
-            SizedBox(
-              width: 20,
-            ),
             Container(
               alignment: Alignment.center,
               width: 100,
               height: 100,
               color: Colors.amber[900],
-              child: Text("Container 1"),
+              child: Text("Container 2"),
             ),
           ],
         ));
