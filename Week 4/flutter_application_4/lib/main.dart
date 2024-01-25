@@ -19,7 +19,8 @@ import 'package:flutter/material.dart';
 // import './widgets/soal_17.dart';
 // import './widgets/soal_18.dart';
 // import './widgets/soal_19.dart';
-import './widgets/soal_20.dart';
+// import './widgets/soal_20.dart';
+import './widgets/soal_21.dart';
 
 void main() {
   runApp(const MainApp());
@@ -32,7 +33,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: soal_20(),
+      home: soal_21(),
     );
   }
 }
