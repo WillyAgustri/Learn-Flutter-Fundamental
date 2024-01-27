@@ -25,7 +25,7 @@ class soal_18 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    height: 100,
+                    height: 10,
                     alignment: Alignment.center,
                     color: Colors.blue[400],
                   ),

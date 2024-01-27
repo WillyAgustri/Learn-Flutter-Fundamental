@@ -6,7 +6,10 @@ class soal_22 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Soal 22")),
+      appBar: AppBar(
+        title: Text("Soal 22"),
+        backgroundColor: Colors.amber,
+      ),
       body: Center(
         child: Container(
           width: 150,
