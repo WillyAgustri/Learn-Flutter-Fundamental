@@ -39,6 +39,7 @@ class _soal_24State extends State<soal_24> {
                     width: 150,
                     height: 150,
                     decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
                         image: DecorationImage(
                             fit: BoxFit.fill,
                             image: NetworkImage(
@@ -53,7 +54,7 @@ class _soal_24State extends State<soal_24> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 21,
             ),
             Container(
               padding: EdgeInsets.all(10),
@@ -66,15 +67,23 @@ class _soal_24State extends State<soal_24> {
             Expanded(
               child: ListView.builder(
                 itemBuilder: (context, index) => Container(
-                  margin: EdgeInsets.all(10),
+                  alignment: Alignment.bottomCenter,
+                  margin: EdgeInsets.all(15),
                   width: 150,
                   height: 150,
                   decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
                       image: DecorationImage(
                           fit: BoxFit.fill,
                           image: NetworkImage(
                               "https://picsum.photos/id/${800 + index}/200/300"))),
-                  child: Text("Gambar ${index}"),
+                  child: Text(
+                    "Gambar ${index}",
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
                 ),
               ),
             )
