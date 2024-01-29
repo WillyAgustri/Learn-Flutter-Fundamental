@@ -19,8 +19,10 @@ class _practiceSnackbarState extends State<practiceSnackbar> {
       body: Center(
           child: ElevatedButton(
               onPressed: () {
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(content: Text("Stop Click That!")));
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text("Stop Click That!"),
+                  action: SnackBarAction(label: "Iya", onPressed: () {}),
+                ));
               },
               child: Text("Show SnackBar"))),
     );
