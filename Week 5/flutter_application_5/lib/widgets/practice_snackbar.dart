@@ -21,6 +21,7 @@ class _practiceSnackbarState extends State<practiceSnackbar> {
               onPressed: () {
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                   content: Text("Stop Click That!"),
+                  duration: Duration(seconds: 1),
                   action: SnackBarAction(label: "Iya", onPressed: () {}),
                 ));
               },
