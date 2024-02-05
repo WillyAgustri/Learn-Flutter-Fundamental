@@ -9,6 +9,9 @@ class practiceTextfield extends StatefulWidget {
 
 class _practiceTextfieldState extends State<practiceTextfield> {
   bool isHidden = true;
+  TextEditingController emailC = TextEditingController();
+  TextEditingController passC = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +23,7 @@ class _practiceTextfieldState extends State<practiceTextfield> {
           child: ListView(
             children: [
               TextField(
+                controller: emailC,
                 textInputAction: TextInputAction.next,
                 decoration: InputDecoration(
                     prefixIcon: Icon(
@@ -34,6 +38,7 @@ class _practiceTextfieldState extends State<practiceTextfield> {
               ),
               SizedBox(height: 20),
               TextField(
+                controller: passC,
                 decoration: InputDecoration(
                     suffixIcon: IconButton(
                         onPressed: () {
@@ -55,7 +60,9 @@ class _practiceTextfieldState extends State<practiceTextfield> {
               SizedBox(height: 20),
               ElevatedButton(
                 style: ButtonStyle(),
-                onPressed: () {},
+                onPressed: () {
+                  print("Email: ${emailC.text}, Password : ${passC.text}");
+                },
                 child: Text("Masuk"),
               )
             ],
