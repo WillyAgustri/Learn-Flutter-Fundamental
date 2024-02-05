@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_5/widgets/practice_snackbar.dart';
 import 'package:flutter_application_5/widgets/practice_stateful.dart';
+import 'package:flutter_application_5/widgets/practice_tabBar_manual.dart';
 import 'package:flutter_application_5/widgets/practice_tabbar.dart';
 import 'package:flutter_application_5/widgets/practice_textfield.dart';
 
@@ -20,7 +21,7 @@ class _MainAppState extends State<MainApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: practice_tabBar(),
+      home: practice_tabBar_manual(),
     );
   }
 }

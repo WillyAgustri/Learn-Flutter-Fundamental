@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 
-class practice_tabBar extends StatefulWidget {
-  const practice_tabBar({super.key});
+class practice_tabBar_manual extends StatefulWidget {
+  const practice_tabBar_manual({super.key});
 
   @override
-  State<practice_tabBar> createState() => _practice_tabBarState();
+  State<practice_tabBar_manual> createState() => _practice_tabBar_manualState();
 }
 
-class _practice_tabBarState extends State<practice_tabBar>
-    with SingleTickerProviderStateMixin {
-  late TabController tabC = TabController(length: 4, vsync: this);
-
+class _practice_tabBar_manualState extends State<practice_tabBar_manual> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
