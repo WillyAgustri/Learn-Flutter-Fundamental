@@ -12,6 +12,14 @@ class _widgetTabBarState extends State<widgetTabBar>
     with TickerProviderStateMixin {
   late TabController _controller = TabController(length: 2, vsync: this);
 
+  late int index;
+
+  @override
+  void initState() {
+    index = 0;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,16 +35,32 @@ class _widgetTabBarState extends State<widgetTabBar>
             labelColor: Color.fromARGB(255, 0, 0, 0),
             tabs: [
               Tab(
-                text: "Latihan Dropdown",
+                text: "Latihan Dropdown ",
               ),
               Tab(
-                text: "Coming Soon..",
+                text: "Coming Soon.. ",
               )
             ]),
       ),
       body: TabBarView(
           controller: _controller,
           children: [dropDownWidgets(), Text("Coming Soon")]),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "About")
+        ],
+        backgroundColor: Colors.teal,
+        currentIndex: index,
+        onTap: (value) {
+          setState(() {
+            index = value;
+            _controller.index = value;
+            print("Ini adalah index ke : ${value}");
+            print("Ini adalah controller index ke : ${_controller.index}");
+          });
+        },
+      ),
     );
   }
 }
