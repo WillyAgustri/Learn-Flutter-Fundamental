@@ -12,14 +12,6 @@ class _widgetTabBarState extends State<widgetTabBar>
     with TickerProviderStateMixin {
   late TabController _controller = TabController(length: 2, vsync: this);
 
-  late int index;
-
-  @override
-  void initState() {
-    index = 0;
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +23,9 @@ class _widgetTabBarState extends State<widgetTabBar>
         ),
         bottom: TabBar(
             controller: _controller,
+            onTap: (value) {
+              print(value);
+            },
             unselectedLabelColor: Colors.white,
             labelColor: Color.fromARGB(255, 0, 0, 0),
             tabs: [
@@ -51,12 +46,10 @@ class _widgetTabBarState extends State<widgetTabBar>
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "About")
         ],
         backgroundColor: Colors.teal,
-        currentIndex: index,
+        currentIndex: _controller.index,
         onTap: (value) {
           setState(() {
-            index = value;
             _controller.index = value;
-            print("Ini adalah index ke : ${value}");
             print("Ini adalah controller index ke : ${_controller.index}");
           });
         },
