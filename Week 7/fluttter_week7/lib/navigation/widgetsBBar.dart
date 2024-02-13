@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttter_week7/widget/practice_drawer.dart';
 
 class widgetsBBar extends StatefulWidget {
   const widgetsBBar({super.key});
@@ -7,7 +8,10 @@ class widgetsBBar extends StatefulWidget {
   State<widgetsBBar> createState() => _widgetsBBarState();
 }
 
-class _widgetsBBarState extends State<widgetsBBar> {
+class _widgetsBBarState extends State<widgetsBBar>
+    with TickerProviderStateMixin {
+  late TabController _controller = TabController(length: 2, vsync: this);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,10 +22,61 @@ class _widgetsBBarState extends State<widgetsBBar> {
         ),
         backgroundColor: Colors.teal,
         centerTitle: false,
-        bottom: BottomNavigationBar(items: [
-          BottomNavigationBarItem(icon: Icon(Icons.read_more_outlined))
+      ),
+      body: TabBarView(controller: _controller, children: [
+        // practice_draw(),
+        Center(
+            child: Text(
+          "Coming Soon",
+          style: TextStyle(fontSize: 30),
+        )),
+        Center(
+            child: Text(
+          "Coming Soon",
+          style: TextStyle(fontSize: 30),
+        )),
+      ]),
+      drawer: Drawer(
+        child: Column(children: [
+          Container(
+            width: double.infinity,
+            color: Colors.teal,
+            height: 100,
+            child: Center(
+              child: Text(
+                "Menu Drawer",
+                style: TextStyle(fontSize: 30, color: Colors.white),
+              ),
+            ),
+          ),
+          ListView.builder(
+              padding: EdgeInsets.all(10),
+              shrinkWrap: true,
+              itemCount: 2,
+              itemBuilder: (context, index) => ElevatedButton.icon(
+                  style: ButtonStyle(
+                      shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4)))),
+                  onPressed: () {},
+                  icon: Icon(Icons.admin_panel_settings_outlined),
+                  label: Text("Data - ${index}")))
         ]),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _controller.index,
+          onTap: (value) {
+            setState(() {
+              _controller.index = value;
+              print(value);
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+                label: "Latihan 1", icon: Icon(Icons.widgets_outlined)),
+            BottomNavigationBarItem(
+                label: "Latihan 2", icon: Icon(Icons.widgets_outlined)),
+          ]),
     );
   }
 }
