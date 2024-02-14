@@ -12,9 +12,26 @@ class widget_profile extends StatelessWidget {
         centerTitle: true,
         title: Text("Profile"),
       ),
-      body: Text(
-        "Ini Profile",
-        style: TextStyle(fontSize: 30, color: Colors.white),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Ini Profile",
+              style: TextStyle(fontSize: 30, color: Colors.teal),
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text("Back Home", style: TextStyle(color: Colors.teal))),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).popUntil((route) => route.isFirst);
+                },
+                child: Text("Back Main", style: TextStyle(color: Colors.teal)))
+          ],
+        ),
       ),
     );
   }
