@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_week7/home.dart';
 import 'package:fluttter_week7/profile.dart';
 
 class practice_navigator extends StatelessWidget {
@@ -28,7 +27,7 @@ class practice_navigator extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => widget_home(),
+                builder: (context) => widget_profile(),
               ));
               print("Kamu mengklik tombol halaman kedua");
             },
