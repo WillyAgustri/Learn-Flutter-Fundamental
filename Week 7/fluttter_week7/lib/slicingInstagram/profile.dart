@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttter_week7/slicingInstagram/profileItem.dart';
 
 class slicing_instagram extends StatelessWidget {
   const slicing_instagram({super.key});
@@ -7,7 +8,7 @@ class slicing_instagram extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 5,
+        elevation: 1,
         shadowColor: Colors.black,
         backgroundColor: Colors.white,
         title: Row(
@@ -27,30 +28,22 @@ class slicing_instagram extends StatelessWidget {
         children: [
           Row(
             children: [
-              Stack(
-                alignment: Alignment.center,
+              profileItem(),
+              Row(
                 children: [
-                  Container(
-                    width: 120,
-                    height: 120,
-                    decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                            begin: Alignment.topCenter,
-                            end: Alignment.bottomCenter,
-                            colors: [Colors.red, Colors.amber]),
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(120 / 2)),
-                  ),
-                  Container(
-                    width: 110,
-                    height: 110,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage("https://shorturl.at/grU03")),
-                        border: Border.all(color: Colors.white, width: 5),
-                        color: const Color.fromARGB(255, 0, 0, 0),
-                        borderRadius: BorderRadius.circular(110 / 2)),
-                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "0.000",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "Posts",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  )
                 ],
               )
             ],
