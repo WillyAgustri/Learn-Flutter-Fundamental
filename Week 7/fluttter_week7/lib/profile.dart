@@ -7,6 +7,9 @@ class widget_profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: SizedBox(),
+        backgroundColor: Colors.teal,
+        centerTitle: true,
         title: Text("Profile"),
       ),
       body: Text(
