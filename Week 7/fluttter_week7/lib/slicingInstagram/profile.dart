@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttter_week7/slicingInstagram/indicatorItem.dart';
 import 'package:fluttter_week7/slicingInstagram/profileItem.dart';
 
 class slicing_instagram extends StatelessWidget {
@@ -25,28 +26,11 @@ class slicing_instagram extends StatelessWidget {
         ],
       ),
       body: ListView(
+        padding: EdgeInsets.only(top: 30, left: 30, bottom: 30, right: 60),
         children: [
           Row(
-            children: [
-              profileItem(),
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      Text(
-                        "0.000",
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        "Posts",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ],
-                  )
-                ],
-              )
-            ],
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [profileItem(), indicatorItem()],
           )
         ],
       ),
