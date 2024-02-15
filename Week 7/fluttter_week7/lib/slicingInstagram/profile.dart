@@ -52,21 +52,27 @@ class slicing_instagram extends StatelessWidget {
             child: tabNavigationItem(),
           ),
           Container(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Expanded(
-                      child: Container(
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(color: Colors.black, width: 2))),
-                    child: Icon(
-                      Icons.grid_on_outlined,
-                      size: 60,
-                    ),
-                  )),
-                  Expanded(child: Icon(Icons.person_pin_outlined, size: 60)),
-                ]),
+            child: Container(
+              decoration: BoxDecoration(
+                  border: Border(
+                      top: BorderSide(color: Colors.grey.shade300, width: 2))),
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                        child: Container(
+                      decoration: BoxDecoration(
+                          border: Border(
+                              bottom:
+                                  BorderSide(color: Colors.black, width: 2))),
+                      child: Icon(
+                        Icons.grid_on_outlined,
+                        size: 60,
+                      ),
+                    )),
+                    Expanded(child: Icon(Icons.person_pin_outlined, size: 60)),
+                  ]),
+            ),
           )
         ],
       ),
