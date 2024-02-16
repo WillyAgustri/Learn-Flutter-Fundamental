@@ -65,14 +65,45 @@ class slicing_instagram extends StatelessWidget {
             itemBuilder: (context, index) => Container(
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage("https://shorturl.at/grU03"))),
+                      fit: BoxFit.fill,
+                      image: NetworkImage(
+                          "https://picsum.photos/200/${500 + index}"))),
             ),
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(label: "Home", icon: Icon(Icons.logo_dev)),
-        BottomNavigationBarItem(label: "Profile", icon: Icon(Icons.logo_dev))
+      bottomNavigationBar:
+          BottomNavigationBar(iconSize: 40, selectedFontSize: 2, items: [
+        BottomNavigationBarItem(
+            label: "",
+            icon: Icon(
+              Icons.home_filled,
+              color: Colors.black,
+            )),
+        BottomNavigationBarItem(
+            label: "",
+            icon: Icon(
+              Icons.search,
+              color: Colors.black,
+            )),
+        BottomNavigationBarItem(
+            label: "",
+            icon: Icon(
+              Icons.add_box_outlined,
+              color: Colors.black,
+            )),
+        BottomNavigationBarItem(
+            label: "",
+            icon: Icon(
+              Icons.person_add_alt_1,
+              color: Colors.black,
+            )),
+        BottomNavigationBarItem(
+            label: "",
+            icon: Icon(
+              Icons.person,
+              color: Colors.black,
+            )),
       ]),
     );
   }

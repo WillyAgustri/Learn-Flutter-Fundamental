@@ -15,7 +15,7 @@ class indicatorItem extends StatelessWidget {
         Column(
           children: [
             Text(
-              "0.000",
+              "1.040",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
             Text(
@@ -30,7 +30,7 @@ class indicatorItem extends StatelessWidget {
         Column(
           children: [
             Text(
-              "0.000",
+              "2.406",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
             Text(
@@ -45,7 +45,7 @@ class indicatorItem extends StatelessWidget {
         Column(
           children: [
             Text(
-              "0.000",
+              "6.560",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
             Text(

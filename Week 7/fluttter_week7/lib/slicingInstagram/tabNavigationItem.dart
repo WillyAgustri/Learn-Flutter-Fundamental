@@ -38,7 +38,7 @@ class tabItem extends StatelessWidget {
           border: Border(
               bottom: BorderSide(
                   color: active == true ? Colors.black : Colors.white,
-                  width: 2))),
+                  width: 3))),
       child: IconButton(
           icon: Icon(
             icon,
