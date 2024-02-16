@@ -3,6 +3,7 @@ import 'package:fluttter_week7/slicingInstagram/descriptionItem.dart';
 import 'package:fluttter_week7/slicingInstagram/editProfileitem.dart';
 import 'package:fluttter_week7/slicingInstagram/indicatorItem.dart';
 import 'package:fluttter_week7/slicingInstagram/profileItem.dart';
+import 'package:fluttter_week7/slicingInstagram/highlightStory.dart';
 import 'package:fluttter_week7/slicingInstagram/tabNavigationItem.dart';
 
 class slicing_instagram extends StatelessWidget {
@@ -33,45 +34,55 @@ class slicing_instagram extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            padding: EdgeInsets.only(top: 30, left: 30, right: 80),
+            padding: EdgeInsets.only(top: 20, left: 20, right: 80),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [profileItem(), indicatorItem()],
             ),
           ),
           Container(
-            padding: EdgeInsets.only(top: 30, left: 30, bottom: 15, right: 30),
+            padding: EdgeInsets.only(top: 20, left: 20, bottom: 15, right: 20),
             child: descriptionItem(),
           ),
           Container(
-            padding: EdgeInsets.only(left: 30, bottom: 30, right: 30),
+            padding: EdgeInsets.only(left: 20, bottom: 20, right: 20),
             child: editProfileItem(),
           ),
+          // INFO: Highlight Story
           Container(
-            padding: EdgeInsets.only(left: 30, bottom: 15, right: 30),
-            child: tabNavigationItem(),
+            padding: EdgeInsets.only(left: 20, bottom: 15, right: 20),
+            child: highlightStory(),
           ),
           Container(
-            child: Container(
-              decoration: BoxDecoration(
-                  border: Border(
-                      top: BorderSide(color: Colors.grey.shade300, width: 2))),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Expanded(
-                        child: Container(
-                      decoration: BoxDecoration(
-                          border: Border(
-                              bottom:
-                                  BorderSide(color: Colors.black, width: 2))),
-                      child: Icon(
-                        Icons.grid_on_outlined,
-                        size: 60,
-                      ),
-                    )),
-                    Expanded(child: Icon(Icons.person_pin_outlined, size: 60)),
-                  ]),
+            child: tabNavigationitem(),
+          ),
+          Container(
+            height: 280,
+            child: GridView(
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 2),
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          fit: BoxFit.fill,
+                          image: NetworkImage("https://picsum.photos/200/400")),
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.circular(80 / 2)),
+                  width: 80,
+                  height: 80,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          fit: BoxFit.fill,
+                          image: NetworkImage("https://picsum.photos/200/400")),
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.circular(80 / 2)),
+                  width: 80,
+                  height: 80,
+                ),
+              ],
             ),
           )
         ],
