@@ -17,15 +17,16 @@ class _tabNavigationitemState extends State<tabNavigationitem> {
           border:
               Border(top: BorderSide(color: Colors.grey.shade300, width: 2))),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-        tabItem(Icons.grid_on_outlined, true),
-        tabItem(Icons.grid_on_outlined, false),
+        tabItem(Icons.grid_on_outlined, true, 40),
+        tabItem(Icons.person_pin_outlined, false, 40),
       ]),
     );
   }
 }
 
 class tabItem extends StatelessWidget {
-  tabItem(this.icon, this.active);
+  tabItem(this.icon, this.active, this.size);
+  final double size;
   final bool active;
   final IconData icon;
   @override
@@ -39,10 +40,15 @@ class tabItem extends StatelessWidget {
                   color: active == true ? Colors.black : Colors.white,
                   width: 2))),
       child: IconButton(
-          icon: Icon(icon),
+          icon: Icon(
+            icon,
+            size: size,
+          ),
           onPressed: () {
             if (active) {
-              print('Tombol $icon ditekan (aktif)');
+              int codePoint = icon.codePoint;
+              String name = String.fromCharCode(codePoint);
+              print('Tombol $name ditekan (aktif)');
             } else {
               print('Tombol $icon ditekan (tidak aktif)');
             }

@@ -56,37 +56,24 @@ class slicing_instagram extends StatelessWidget {
           Container(
             child: tabNavigationitem(),
           ),
-          Container(
-            height: 280,
-            child: GridView(
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 2),
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: NetworkImage("https://picsum.photos/200/400")),
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.circular(80 / 2)),
-                  width: 80,
-                  height: 80,
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: NetworkImage("https://picsum.photos/200/400")),
-                      color: Colors.amber,
-                      borderRadius: BorderRadius.circular(80 / 2)),
-                  width: 80,
-                  height: 80,
-                ),
-              ],
+          GridView.builder(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemCount: 11,
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+            itemBuilder: (context, index) => Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage("https://shorturl.at/grU03"))),
             ),
-          )
+          ),
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(label: "Home", icon: Icon(Icons.logo_dev)),
+        BottomNavigationBarItem(label: "Profile", icon: Icon(Icons.logo_dev))
+      ]),
     );
   }
 }
