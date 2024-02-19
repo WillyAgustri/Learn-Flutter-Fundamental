@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_week7/navigation/widgetsBBar.dart';
+import 'package:fluttter_week7/practiceMyHttp/myHttp.dart';
+/* import 'package:fluttter_week7/practiceNav/navigation/widgetsBBar.dart';
 import 'package:fluttter_week7/slicingInstagram/profile.dart';
-import 'package:fluttter_week7/widget/practice_navigator.dart';
+import 'package:fluttter_week7/practiceNav/navigation/widget/practice_navigator.dart'; */
 
 void main() {
   runApp(const MainApp());
@@ -13,6 +14,6 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: slicing_instagram());
+        debugShowCheckedModeBanner: false, home: PracticeMyhttp());
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttter_week7/profile.dart';
+import 'package:fluttter_week7/practiceNav/navigation/widget/profile.dart';
 
 class practice_navigator extends StatelessWidget {
   const practice_navigator({super.key});
