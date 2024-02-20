@@ -3,3 +3,4 @@
 Practice :
 
 1. Post HTTP
+2. PUT HTTP
