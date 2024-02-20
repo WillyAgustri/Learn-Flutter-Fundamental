@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as myhttp;
@@ -11,6 +13,10 @@ class get_http extends StatefulWidget {
 
 class _get_httpState extends State<get_http> {
   TextEditingController nameC = TextEditingController();
+  TextEditingController jobC = TextEditingController();
+
+  String result = "Data Masih Kosong";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +33,8 @@ class _get_httpState extends State<get_http> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const TextField(
+            TextField(
+              controller: nameC,
               decoration: InputDecoration(
                   border: OutlineInputBorder(), hintText: "Name"),
               autocorrect: false,
@@ -35,7 +42,8 @@ class _get_httpState extends State<get_http> {
             const SizedBox(
               height: 10,
             ),
-            const TextField(
+            TextField(
+              controller: jobC,
               decoration: InputDecoration(
                   border: OutlineInputBorder(), hintText: "Job"),
               autocorrect: false,
@@ -51,9 +59,20 @@ class _get_httpState extends State<get_http> {
                     shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8)))),
                 onPressed: () async {
-                  var response = await myhttp
-                      .post(Uri.parse("https://reqres.in/api/users"));
-                  print(response);
+                  var response = await myhttp.post(
+                      Uri.parse("https://reqres.in/api/users"),
+                      body: {"name": nameC.text, "job": jobC.text});
+                  print(response.body);
+
+                  setState(() {
+                    var data = jsonDecode(response.body);
+                    result = "Nama :" +
+                        data["name"] +
+                        "\n" +
+                        "Pekerjaan :" +
+                        data["job"];
+                    print(result);
+                  });
                 },
                 child: const Text("Post Data",
                     style: TextStyle(color: Colors.white, fontSize: 30))),
@@ -65,7 +84,7 @@ class _get_httpState extends State<get_http> {
                     fontSize: 20,
                     color: Colors.teal,
                     fontWeight: FontWeight.bold)),
-            const Text("Data Kosong!",
+            Text(result,
                 style: TextStyle(
                     fontSize: 15,
                     color: Colors.red,
