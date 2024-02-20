@@ -70,7 +70,13 @@ class _get_httpState extends State<get_http> {
                         data["name"] +
                         "\n" +
                         "Pekerjaan :" +
-                        data["job"];
+                        data["job"] +
+                        "\n" +
+                        "ID :" +
+                        data["id"] +
+                        "\n" +
+                        "Dibuat :" +
+                        data["createdAt"];
                     print(result);
                   });
                 },
