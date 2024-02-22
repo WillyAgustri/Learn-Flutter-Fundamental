@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as myhttp;
@@ -30,6 +32,9 @@ class _delete_httpState extends State<delete_http> {
                   onPressed: () async {
                     var response = await myhttp
                         .get(Uri.parse("https://reqres.in/api/users/2"));
+
+                    var data = jsonDecode(response.body);
+
                     print(response.body);
                   },
                   child: Text("Get Data")),
