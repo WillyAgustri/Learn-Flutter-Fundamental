@@ -1,3 +1,5 @@
 # flutter_week9
 
-A new Flutter project.
+Practice Week 9 :
+
+1. Model
