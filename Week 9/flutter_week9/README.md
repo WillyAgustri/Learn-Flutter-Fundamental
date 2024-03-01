@@ -3,3 +3,4 @@
 Practice Week 9 :
 
 1. Model
+2. practice http request (Kemidikbud API data mahasiswa)
