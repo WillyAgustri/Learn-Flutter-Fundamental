@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_week9/dataMahasiswa/widget/home.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_week9/practiceModel/practice_model.dart';
 
 void main() {
@@ -11,6 +12,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: home());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: home());
   }
 }
