@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_week9/model/userMode.dart';
+import 'package:flutter_week9/practiceModel/model/userMode.dart';
 import 'package:http/http.dart' as http;
 
 class practice_model extends StatefulWidget {
