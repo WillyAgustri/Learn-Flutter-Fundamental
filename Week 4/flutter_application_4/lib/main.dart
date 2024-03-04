@@ -21,20 +21,27 @@ import 'package:flutter/material.dart';
 // import './widgets/soal_19.dart';
 // import './widgets/soal_20.dart';
 // import './widgets/soal_21.dart';
-import './widgets/soal_22.dart';
+// import './widgets/soal_22.dart';
+import './widgets/soal_24.dart';
+// import './widgets/soal_23.dart';
 
 void main() {
   runApp(const MainApp());
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({super.key});
 
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: soal_22(),
+      home: soal_24(),
     );
   }
 }

@@ -12,7 +12,8 @@ class _practice_dateState extends State<practice_date> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Date "),
+        backgroundColor: Colors.teal,
+        title: Text("Date - practice"),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week6_flutter/widget/practiceBottomSheet.dart';
 import 'package:week6_flutter/widget/practiceDropDown.dart';
 
 class widgetTabBar extends StatefulWidget {
@@ -33,13 +34,13 @@ class _widgetTabBarState extends State<widgetTabBar>
                 text: "Latihan Dropdown ",
               ),
               Tab(
-                text: "Coming Soon.. ",
+                text: "Latihan Bottomsheet",
               )
             ]),
       ),
       body: TabBarView(
           controller: _controller,
-          children: [dropDownWidgets(), Text("Coming Soon")]),
+          children: [dropDownWidgets(), practiceBottomSheet()]),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
