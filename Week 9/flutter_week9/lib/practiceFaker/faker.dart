@@ -21,7 +21,7 @@ class _practice_fakerState extends State<practice_faker> {
           itemBuilder: (context, index) => ListTile(
             leading: CircleAvatar(),
             title: Text("Orang ke ${faker.person.name()}"),
-            subtitle: Text("Dia adalah orang ${index}"),
+            subtitle: Text("Email : ${faker.internet.email()}"),
           ),
         ),
       ),
