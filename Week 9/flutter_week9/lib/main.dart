@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_week9/practiceDate/practiceDate.dart';
 import 'package:flutter_week9/practiceFaker/faker.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:faker/faker.dart';
@@ -29,6 +30,6 @@ class MainApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),
         debugShowCheckedModeBanner: false,
-        home: practice_faker());
+        home: practice_date());
   }
 }
