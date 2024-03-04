@@ -15,6 +15,13 @@ class _practice_dateState extends State<practice_date> {
         backgroundColor: Colors.teal,
         title: Text("Date - practice"),
       ),
+      body: Center(
+        child: ListView.builder(
+          itemBuilder: (context, index) => ListTile(
+            title: Text("my Title"),
+          ),
+        ),
+      ),
     );
   }
 }
