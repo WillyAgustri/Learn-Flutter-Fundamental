@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:intl/intl.dart';
 import 'package:faker/faker.dart';
 
 class practice_date extends StatefulWidget {
@@ -27,7 +27,8 @@ class _practice_dateState extends State<practice_date> {
                 backgroundImage:
                     NetworkImage("${faker.image.image(random: true)}")),
             title: Text(faker.internet.userName()),
-            subtitle: Text(faker.internet.email()),
+            subtitle: Text("${faker.internet.email()}\n" +
+                DateFormat.yMMMMEEEEd().format(DateTime.now())),
           ),
         ),
       ),
