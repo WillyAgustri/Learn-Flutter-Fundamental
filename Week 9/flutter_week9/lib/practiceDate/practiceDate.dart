@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:faker/faker.dart';
+
 class practice_date extends StatefulWidget {
   const practice_date({super.key});
 
@@ -8,6 +10,8 @@ class practice_date extends StatefulWidget {
 }
 
 class _practice_dateState extends State<practice_date> {
+  var faker = new Faker();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,9 +21,13 @@ class _practice_dateState extends State<practice_date> {
       ),
       body: Center(
         child: ListView.builder(
+          itemCount: 20,
           itemBuilder: (context, index) => ListTile(
-            title: Text("my Title"),
-            subtitle: Text("Email"),
+            leading: CircleAvatar(
+                backgroundImage:
+                    NetworkImage("${faker.image.image(random: true)}")),
+            title: Text(faker.internet.userName()),
+            subtitle: Text(faker.internet.email()),
           ),
         ),
       ),
