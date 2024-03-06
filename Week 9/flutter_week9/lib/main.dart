@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_week9/practiceBNavigation/practice_bottom_navigation.dart';
 import 'package:flutter_week9/practiceDate/practiceDate.dart';
-import 'package:flutter_week9/practiceFaker/faker.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:faker/faker.dart';
 // import 'package:flutter_week9/dataMahasiswa/widget/home.dart';
@@ -8,7 +8,6 @@ import 'package:faker/faker.dart';
 // import 'package:flutter_week9/practiceModel/practice_model.dart';
 
 void main() {
-  var faker = new Faker();
   runApp(const MainApp());
 }
 
@@ -30,6 +29,6 @@ class MainApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),
         debugShowCheckedModeBanner: false,
-        home: practice_date());
+        home: practice_bottom_navigation());
   }
 }
