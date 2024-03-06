@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_week9/practiceAvatarGlow/practice_avatar_glow.dart';
 import 'package:flutter_week9/practiceBNavigation/practice_bottom_navigation.dart';
 import 'package:flutter_week9/practiceDate/practiceDate.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -29,6 +30,6 @@ class MainApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),
         debugShowCheckedModeBanner: false,
-        home: practice_bottom_navigation());
+        home: practice_avatar_glow());
   }
 }
