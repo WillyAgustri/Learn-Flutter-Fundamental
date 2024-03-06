@@ -32,8 +32,7 @@ class _practice_intro_screenState extends State<practice_intro_screen> {
             ),
             PageViewModel(
               title: "Title of introduction page",
-              body:
-                  "Welcome to the app! This is a description of how it works.",
+              body: "Welcome to the app!This is a description of how it works.",
               image: const Center(
                 child: Icon(Icons.waving_hand, size: 50.0),
               ),
