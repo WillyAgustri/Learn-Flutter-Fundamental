@@ -23,9 +23,9 @@ class _practice_intro_screenState extends State<practice_intro_screen> {
           onDone: () => Text("Has Done!"),
           pages: [
             PageViewModel(
-              title: "Title of introduction page",
+              title: "Hai, Mahasiswa",
               body:
-                  "Welcome to the app! This is a description of how it works.",
+                  "Selamat Datang di App Absen Siuber BETA! Aplikasi ini berfungsi untuk mempermudah mahasiswa dalam melakukan absen kelas",
               image: const Center(
                 child: Icon(Icons.waving_hand, size: 50.0),
               ),
